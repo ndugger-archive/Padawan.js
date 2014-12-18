@@ -63,8 +63,7 @@
 			_this.tooltip = document.createElement("div");
 			_this._.setup(_this);
 			_this._.make.tooltip(_this);
-			console.log(_this);
-			_this.target.addEventListener("mouseenter", function(e) {
+			_this.target.addEventListener(_this.options && _this.options.event || "mouseenter", function(e) {
 				var target = _this.target;
 				if ((target.offsetLeft + target.offsetWidth/2) - (_this.width/2) < 0) {
 					_this.tooltip.style.left = target.offsetLeft + "px";
@@ -76,7 +75,9 @@
 				document.body.appendChild(_this.tooltip);
 			});
 			_this.target.addEventListener("mouseleave", function() {
-				_this.tooltip.parentNode.removeChild(_this.tooltip);
+				if (_this.tooltip.parentNode) {
+					_this.tooltip.parentNode.removeChild(_this.tooltip);
+				};
 			});
 		}
 	};
@@ -84,7 +85,7 @@
 	window.addEventListener("load", function() {
 		var tooltips = document.querySelectorAll("[data-padawan]");
 		for (var i = 0, count = tooltips.length; i < count; i ++) {
-			new Padawan(tooltips[i], tooltips[i].dataset.padawan).observe();
+			new Padawan(tooltips[i], tooltips[i].dataset.padawan).observe() || "missing message argument...";
 		};
 	});
 });
