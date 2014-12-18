@@ -1,7 +1,7 @@
 **This is a work in progress!**
 Padawan.js
 ==========
-(Published under MIT License)
+(Released under MIT License)
 
 Simple, extensible tooltip library
 	
