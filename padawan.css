@@ -1,0 +1,19 @@
+.padawan-tip {
+	background:rgb(68, 83, 100);
+	color:white;
+	font-size:14px;
+	padding:8px;
+	display:inline-block;
+	font-family:"Arial", sans-serif;
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+.padawan-arrow {
+	border-bottom:8px solid rgb(68, 83, 100);
+	border-left:8px solid transparent;
+	border-right:8px solid transparent;
+	position:absolute;
+	top:-8px;
+}
