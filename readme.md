@@ -30,8 +30,9 @@ Or you can customize the `Padawan` with a third "options" argument:
 	var info = new Padawan({
 		target: document.getElementById("myElement"),
 		message: "Here's my message!",
+		event: "click", // default is mouseenter
 		style: {
-			backgroundColor: "red"
+			background: "red"
 		}
 	});
 	info.observe();
