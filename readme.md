@@ -1,3 +1,4 @@
+**This is a work in progress!**
 Padawan.js
 ==========
 (Published under MIT License)
@@ -51,5 +52,3 @@ However, customizing is far easier to do in javascript, so this isn't the prefer
 		___: "___"
 	});
 	info.observe();
-
-**This is a work in progress!**
